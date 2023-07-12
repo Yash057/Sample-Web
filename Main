@@ -1,21 +1,10 @@
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.ResourceHandler;
-
-public class StaticSiteServer {
-    public static void main(String[] args) throws Exception {
-        int port = 8080;
-        String webRoot = "path/to/website/directory";
-
-        Server server = new Server(port);
-
-        ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setDirectoriesListed(false);
-        resourceHandler.setWelcomeFiles(new String[]{"index.html"});
-        resourceHandler.setResourceBase(webRoot);
-
-        server.setHandler(resourceHandler);
-
-        server.start();
-        server.join();
-    }
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Website</title>
+</head>
+<body>
+    <h1>Welcome to Web App</h1>
+    <p>Azure App Services</p>
+</body>
+</html>
